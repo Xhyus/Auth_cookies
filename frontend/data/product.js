@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const getProducts = async () => {
-    const response = await axios.get(`${process.env.servidor}/products`);
+const getProducts = async (token) => {
+    const response = await axios.get(`${process.env.servidor}/products`, { headers: { cookie: token } });
     return response
 }
 

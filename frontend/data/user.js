@@ -13,7 +13,13 @@ const logout = async () => {
     return response
 }
 
+const checkToken = async (token) => {
+    const response = await axios.get(`${process.env.servidor}/checkToken`, { headers: { cookie: token } });
+    return response
+}
+
 module.exports = {
     login,
-    logout
+    logout,
+    checkToken
 }
