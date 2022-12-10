@@ -28,7 +28,9 @@ const createUser = async (req, res) => {
 }
 
 const login = (req, res) => {
-    let email = req.body.email.toLowerCase();
+    console.log(req.body)
+    let email = req.body.email
+    email = email.toLowerCase();
     User.findOne({ email }, (err, user) => {
         if (err) {
             return res.status(400).send({ message: 'Error al iniciar sesión' });
