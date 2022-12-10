@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1",
+  "description": "Proyecto utilizado para enseñar autenticacion con cookies y rutas protegidas",
+  "main": "index.js",
+  "author": "Ignacio González",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.4",
+    "mongoose": "5.13.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
