@@ -26,19 +26,6 @@ const getProducts = (req, res) => {
     })
 }
 
-const updateProduct = (req, res) => {
-    const { id } = req.params
-    Product.findByIdAndUpdate(id, req.body, (error, product) => {
-        if (error) {
-            return res.status(400).send({ message: "No se pudo actualizar el producto" })
-        }
-        if (!product) {
-            return res.status(404).send({ message: "No se encontro el producto" })
-        }
-        return res.status(200).send({ message: "Producto modificado" })
-    })
-}
-
 const deleteProduct = (req, res) => {
     const { id } = req.params
     Product.findByIdAndDelete(id, (error, product) => {
@@ -68,7 +55,6 @@ const getProduct = (req, res) => {
 module.exports = {
     createProduct,
     getProducts,
-    updateProduct,
     deleteProduct,
     getProduct
 }
